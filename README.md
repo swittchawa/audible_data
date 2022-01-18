@@ -5,6 +5,30 @@
 4. Visualisation with Google Data Studio
 5. The pipeline is orchestrated using Airflow with Cloud Composer (GCP).
 
+# Data
+Data collection from MySQL as a list. Then it was converted into Pandas DataFrame called audible_transaction. There were 2269 rows of data.
+
+<img width="529" alt="Screen Shot 2565-01-18 at 18 25 53" src="https://user-images.githubusercontent.com/73461649/149928809-144df7cc-fd89-48b3-8cd7-a5849cf25cbb.png">
+
+<img width="1441" alt="Screen Shot 2565-01-18 at 18 29 22" src="https://user-images.githubusercontent.com/73461649/149929342-1c8540c7-8881-4e99-b3b8-ea377d8f6639.png">
+
+A transaction data was also imported from MySQL and converted into Pandas DataFrame called audible_data
+
+<img width="519" alt="Screen Shot 2565-01-18 at 18 30 33" src="https://user-images.githubusercontent.com/73461649/149929489-ce074a77-1ae8-4b18-ada5-f8f699a62343.png">
+
+Both tables were joined.
+<img width="1450" alt="Screen Shot 2565-01-18 at 18 33 35" src="https://user-images.githubusercontent.com/73461649/149929905-53a4200e-5344-4efa-85c5-7350bdb53dc3.png">
+
+Nevertheless, the price was listed as a USD but the client required the price to be listed as THB.
+A conversion rate was imported through REST API.
+
+<img width="216" alt="Screen Shot 2565-01-18 at 18 31 25" src="https://user-images.githubusercontent.com/73461649/149929615-ec06e3ce-4111-4bdf-b61a-848a2a3a3913.png">
+
+Completed transformed data
+
+<img width="1445" alt="Screen Shot 2565-01-18 at 18 35 28" src="https://user-images.githubusercontent.com/73461649/149930167-fee04880-a312-47e5-a26d-426ead4c5b9f.png">
+
+
 # Visualisation with Google Data Studio
 A view was created to illustrated the neccesary data: revenue, country, book name, customer id, category, purchased date, book id.
 
